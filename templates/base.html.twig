@@ -15,9 +15,11 @@
         }
     </style>
 
-    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.min.css')}}">
 
-    {% block customstylesheets %}{% endblock %}
+
+    {% block customstylesheets %}
+        <link rel="stylesheet" href="{{asset('assets/css/fontawesome.min.css')}}">
+    {% endblock %}
 
     <title>{% block title %}Symfony 4 course app - video sharing service{% endblock %}</title>
 
@@ -89,17 +91,19 @@
         </footer>
     {% endblock %}
 </div>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="{{asset('assets/js/jquery.js')}}"></script>
-<script src="{{asset('assets/js/popper.js')}}"></script>
-<script src="{{asset('assets/js/bootstrap.js')}}"></script>
 
-<script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-</script>
-{% block customjavascripts %}{% endblock %}
+{% block customjavascripts %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{asset('assets/js/jquery.js')}}"></script>
+    <script src="{{asset('assets/js/popper.js')}}"></script>
+    <script src="{{asset('assets/js/bootstrap.js')}}"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+{% endblock %}
 </body>
 </html>
