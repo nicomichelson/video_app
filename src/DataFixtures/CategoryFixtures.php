@@ -10,9 +10,24 @@ class CategoryFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-         $category = new Category();
-         $manager->persist($category);
+        $this->loadMainCategories($manager);
 
+    }
+
+    private  function loadMainCategories($manager)
+    {
+        foreach ($this->getMainCategoriesData() as $name)
+        {
+            $category = new Category();
+            $category->setName('name');
+            $manager->persist($category);
+
+        }
         $manager->flush();
+    }
+
+    private function getMainCategoriesData()
+    {
+        return ['Electronics', 'Toys', 'Books', 'Movies'];
     }
 }
