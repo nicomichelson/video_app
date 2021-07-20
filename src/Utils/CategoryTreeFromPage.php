@@ -42,8 +42,6 @@ class CategoryTreeFromPage extends CategoryTreeAbstract
 
     public function getCategoryList(array $categories_array)
     {
-
-
         $this->categoryList .= $this->html_1;
         foreach ($categories_array as $value){
             $catName = $this->slugger->slugify($value['name']);
