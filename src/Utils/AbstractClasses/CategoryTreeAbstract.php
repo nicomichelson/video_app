@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 abstract class CategoryTreeAbstract {
 
     public $categoriesArrayFromDb;
-    public $categoryList;
+    public $categorylist;
     protected static $dbconnection;
 
     public function __construct(EntityManagerInterface $entitymanager, UrlGeneratorInterface $urlgenerator)
