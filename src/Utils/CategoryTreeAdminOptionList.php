@@ -9,8 +9,8 @@ class CategoryTreeAdminOptionList extends CategoryTreeAbstract {
         foreach ($categories_array as $value)
         {
             $this->categorylist[] = ['name'=> str_repeat("-",$repeat).$value['name'], 'id'=>$value['id']];
-
-            if(!empty($value['children']))
+            
+            if(!empty($value['children'])) 
             {
                 $repeat = $repeat + 2;
                 $this->getCategoryList($value['children'],$repeat);
