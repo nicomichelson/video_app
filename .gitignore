@@ -14,3 +14,11 @@
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
+
+# dependencies
+node_modules
+/migrations/*
+/node_modules/yocto-queue/readme.md
+/symfony.lock
+/composer.lock
+symfony.lock
